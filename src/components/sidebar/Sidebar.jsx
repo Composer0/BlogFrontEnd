@@ -7,7 +7,7 @@ export default function Sidebar() {
         <span className="sidebarTitle">ABOUT ME</span>
         <img className="sidebarImg" src="https://www.orionpalmer.com/static/media/orionpalmer.ba51d754.webp" alt=""></img>
         <p>
-          lorem ipsum dolor sit amet, consectetur adip lorem lorem. Cum sociis natoque penatibus et justo
+          HI! I'm Orion Palmer, a Fullstack Developer, Music Educator, Husband, Cook, and an all round chill guy. Feel free to email or message me if you have questions or just want to chat.
         </p>
       </div>
       <div className="sidebarItem">
