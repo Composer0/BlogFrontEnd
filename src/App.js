@@ -1,7 +1,8 @@
 import NavBar from './components/NavBar/NavBar'
 // import Home from './pages/home/Home'
 // import Single from './pages/single/Single'
-import Write from './pages/write/Write'
+// import Write from './pages/write/Write'
+import Settings from './pages/settings/Settings'
 
 function App() {
     return (
@@ -11,7 +12,8 @@ function App() {
             <NavBar />
             {/* <Single /> */}
             {/* <Home /> */}
-            <Write />
+            {/* <Write /> */}
+            <Settings />
 
         </>
         </div>

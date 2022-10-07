@@ -45,11 +45,18 @@ input:focus, textarea:focus {
     background-color: #0a2f44;
 }
 
-.writeInput {
+.writeInput, .writeText {
     font-size: 30px;
     border: none;
     padding: 20px;
+}
+
+.writeInput {
     width: 70vw;
+}
+
+.writeText {
+    width: 72vw;
 }
 
 .writeInput:focused {

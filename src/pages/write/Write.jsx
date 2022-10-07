@@ -15,7 +15,7 @@ export default function Write() {
             {/* autoFocus ensures that upon page load that the cursor is already active within the input field. */}
         </div>
         <div className="writeFormGroup">
-            <textarea placeholder="Share what you've learned..." type="text" className="writeInput writeText"></textarea>
+            <textarea placeholder="Share what you've learned..." type="text" className="writeText"></textarea>
         </div>
         <button className="writeSubmit">Publish</button>
       </form>
