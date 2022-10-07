@@ -1,5 +1,7 @@
 import NavBar from './components/NavBar/NavBar'
-import Home from './components/pages/home/Home'
+// import Home from './pages/home/Home'
+// import Single from './pages/single/Single'
+import Write from './pages/write/Write'
 
 function App() {
     return (
@@ -7,7 +9,9 @@ function App() {
         <>
 
             <NavBar />
-            <Home />
+            {/* <Single /> */}
+            {/* <Home /> */}
+            <Write />
 
         </>
         </div>

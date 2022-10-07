@@ -19,9 +19,8 @@ export default function Post() {
             <span className="postDate">1 Hour Ago</span>
       </div>
         <p className="postDescription">
-Even being a remix, the song is included as an official Muse track, in the Super Deluxe version.
-
-The remix is, as opposed to the RnB nature of the original, made as a Trap song and more prominently features strings and the Kitara bass as lead instruments instead of the guitar.
+            Even being a remix, the song is included as an official Muse track, in the Super Deluxe version.
+            The remix is, as opposed to the RnB nature of the original, made as a Trap song and more prominently features strings and the Kitara bass as lead instruments instead of the guitar.
         </p>
     </div>
   )

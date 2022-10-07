@@ -5,9 +5,9 @@ export default function NavBar() {
     <div className="nav">
         <div className="navLeft">
             <i className="navIcon fab fa-facebook-square"></i>
-            <i className="navIcon fab fa-twitter-square"></i>
             <i className="navIcon fab fa-github-square"></i>
             <i className="navIcon fab fa-linkedin"></i>
+            <i className="navIcon fa-brands fa-hashnode"></i>
         </div>
         <div className="navCenter">
             <ul className="navList">
