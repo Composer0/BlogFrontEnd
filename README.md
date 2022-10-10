@@ -1,4 +1,5 @@
 # Blog
+### React, JavaScript, CSS
 
 Creating a blog for my portfolio and to document my journey as an early career web developer.
 
