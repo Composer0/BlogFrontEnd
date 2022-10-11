@@ -17,3 +17,6 @@ Learned how to cut off text with line-clamp and use text-overflow to create elli
 Added Write and Settings page components to the blog project.
 Learned how to incorporate htmlFor to add documents from local drive. Need to learn how to incorporate this feature to make changes server side.
 Also learned about autoFocus on page load. This is being implemented on the write page in the title bar.
+
+## Day 4 & 5
+Added Login and Register pages.
