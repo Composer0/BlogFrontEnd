@@ -20,3 +20,10 @@ Also learned about autoFocus on page load. This is being implemented on the writ
 
 ## Day 4 & 5
 Added Login and Register pages.
+
+## Day 6
+Added new folders for Contact and About Page
+Added react-router-dom throughout the project. Links can now successfully navigate between the pages while also checking to see if the user is logged in or not.
+Began incorporating a href links into the project for the social media icons.
+Created NavBar variation for user not being logged in.
+Learned about how Routes replaced switch and in fact makes it easier to write out the route. Used element inside of route to indicate the proper route and thus saving one line of code for each route when implemented.
