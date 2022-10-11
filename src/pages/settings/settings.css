@@ -16,7 +16,7 @@
 .settingsUpdateTitle {
     font-size: 30px;
     margin-bottom: 20px;
-    color: rgb(36, 212, 109);
+    color: #b5c99a;
 }
 
 .settingsDeleteTitle {
@@ -25,9 +25,14 @@
     cursor: pointer;
 }
 
+.settingsDeleteTitle:hover {
+    color: rgb(255, 94, 0);
+}
+
 .settingsForm {
     display: flex;
     flex-direction: column;
+    /* align-items: center; */
 }
 
 .settingsProfilePicture {
@@ -46,14 +51,18 @@
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-color: lightcoral;
+    background-color: #020f18;
     /* color:  */
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: 10px;
     cursor: pointer;
+}
 
+.settingsProfilePictureIcon:hover {
+    color: #93dfdf;
+    background-color: #06263d;
 }
 
 .settingsForm > label {
@@ -61,7 +70,7 @@
     margin-top: 20px;
 }
 
-.settingsForm > input {
+.settingsForm >input {
     color: grey;
     margin: 10px 0;
     height: 30px;
@@ -75,8 +84,12 @@
     border: none;
     border-radius: 10px;
     color: white;
-    background-color: teal;
+    background-color: #66bfbf;
     padding: 10px;
     margin-top: 20px;
     cursor: pointer;
+}
+
+.settingsSubmit:hover {
+    background-color: #427e7e;
 }

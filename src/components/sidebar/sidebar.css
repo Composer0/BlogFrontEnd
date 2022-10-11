@@ -57,6 +57,9 @@
     margin-top: 15px;
     cursor: pointer;
 }
+.sidebarListItem:hover {
+    color:rgb(144, 218, 218)
+}
 
 .sidebarSocial {
     margin-top: 15px;
@@ -72,4 +75,8 @@
     cursor: pointer;
     color: #444;
     color: #93b6b6;
+}
+
+.sidebarIcon:hover {
+    color: #afc9c9;
 }

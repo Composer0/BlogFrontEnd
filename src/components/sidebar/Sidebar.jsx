@@ -25,7 +25,7 @@ export default function Sidebar() {
             <i className="sidebarIcon fab fa-facebook-square"></i>
             <i className="sidebarIcon fab fa-github-square"></i>
             <i className="sidebarIcon fab fa-linkedin"></i>
-            <i className="navIcon fa-brands fa-hashnode"></i>
+            <i className="sidebarIcon navIcon fa-brands fa-hashnode"></i>
           </div>
       </div>
     </div>
