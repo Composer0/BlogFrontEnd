@@ -1,4 +1,4 @@
-# Blog Frontend Portion
+# Blog: Frontend Portion
 ### *React*, *JavaScript*, *CSS*
 
 FrontEnd design for a blog that will be featured on my portfolio to document my journey as an early career web developer.
