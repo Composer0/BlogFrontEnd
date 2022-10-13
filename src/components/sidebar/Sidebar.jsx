@@ -22,10 +22,18 @@ export default function Sidebar() {
       <div className="sidebarItem">
         <span className="sidebarTitle">FOLLOW ME</span>
           <div className="sidebarSocial">
-            <i className="sidebarIcon fab fa-facebook-square"></i>
-            <i className="sidebarIcon fab fa-github-square"></i>
-            <i className="sidebarIcon fab fa-linkedin"></i>
-            <i className="sidebarIcon navIcon fa-brands fa-hashnode"></i>
+          <a href="https://www.linkedin.com/in/orion-palmer/" target="_blank" rel="noreferrer">
+                <i className="sidebarIcon fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UC1PLqeZnOUcLVteRSYwk1WQ/featured" target="_blank" rel="noreferrer">
+                <i class="sidebarIcon fa-brands fa-youtube"/>
+            </a>
+            <a href="https://orionpalmer.hashnode.dev/" target="_blank" rel="noreferrer">
+                <i className="sidebarIcon fa-brands fa-hashnode"/>
+            </a>
+            <a href="https://github.com/Composer0" target="_blank" rel="noreferrer">
+                <i className="sidebarIcon fab fa-github"/>
+            </a>
           </div>
       </div>
     </div>
