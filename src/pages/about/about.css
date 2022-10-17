@@ -1,0 +1,207 @@
+.card {
+    /* // define the perspective to help create the flip element. Establishes a 3-dimensional effect. */
+    perspective: 150rem; 
+    -moz-perspective: 150rem; 
+    position: relative;
+    /* // perspective is lost when position is set to absolute... to correct this height must be established within the parent element. */
+    height: 50rem;
+}
+
+.card__side{ 
+        color: #fff;
+        font-size: 2rem;
+        height: 52rem;
+        transition: all .8s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: rgba(135, 151, 46, 0.5);
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+        .card_side--front {
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .card_side--back {
+            transform: rotateY(180deg);
+        }
+
+            .card_side-1{
+                background-image: linear-gradient(to right bottom, blue,  rgb(18, 18, 95));
+            }
+            /* .card_side-2 {
+                background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+            }
+            .card_side-3 {
+                background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+            } */
+        
+
+        
+    
+    .card:hover card__side--front {
+        transform: rotateY(-180deg);
+    }
+ 
+    .card:hover card__side--back {
+        transform: rotateY(0);
+    }
+
+    /* // Front Side Card Styling */
+    .card__picture {
+        background-size:cover;
+        height: 23rem;
+        background-blend-mode: overlay;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100% );
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100% );
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+        
+        .card_picture-1 {
+            background-image: linear-gradient(to right bottom, black, blue, 50%);}
+    
+    .card__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: #fff;
+        position: absolute;
+        top: 9rem;
+        right: 16rem;
+        width: 75%;
+        text-align: right;
+    }
+
+    .card__heading-span {
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone; 
+        /* //this is used to create an effect of multiple boxes when the text wraps around to the next line. */
+    }
+
+        .card__heading--1 {
+            background-image: linear-gradient(to right bottom, green, rgb(19, 66, 19));
+        }
+
+        /* .card__heading--2 {
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+        }
+
+        .card__heading--3 {
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+        } */
+
+    
+    .card__details {
+        padding: 3rem;
+    }
+        
+        /* ul {
+            list-style-type: none;
+            width: 80%;
+            margin: 0 auto;//tends to always center as long as you did the work previoiusly of text-aligning center in the child element. Raising your children properly.
+            color: $color-grey-dark; */
+            
+            /* li{
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color-grey-text;
+                } */
+                
+            /* } */
+        /* } */
+
+    
+
+/* // Front Side Card Styling  */
+
+/* //Back Side Card Styling */
+
+    .card__cta {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        text-align: center;
+    }
+
+    .card__price-box {
+        text-align: center;
+        color: #fff;
+        margin: 4rem;
+    }
+
+    .card__price-only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    .card__price-value {
+        font-size: 6rem;
+        font-weight: 100;
+    }
+
+
+
+
+    /* // @include respond(tabletPortrait) { */
+        /* // following media query allows us to detect a mobile device that doesn't have the ability to hover. */
+        /* @media only screen and (max-width: 56.25em), 
+        only screen and (hover:none) {
+        height: auto;
+        border-radius: 3px;
+        background-color: #fff;
+        
+        &__side{   
+            height: auto;
+            position: relative;
+            box-shadow: none;
+
+
+            &--back {
+                transform: rotateY(0);
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100% );
+
+            }         
+        }
+        
+        &:hover &__side--front {
+            transform: rotateY(0);
+        }
+
+        &__details {
+            padding: 1rem 3rem;
+        }
+    //Back Side Card Styling
+
+        &__cta {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0);
+            width: 100%;
+            padding: 7rem 4rem 4rem 4rem;
+        }
+
+        &__price-box {
+            margin-bottom: 3rem;
+        }
+
+        &__price-value {
+            font-size: 6rem;
+            font-weight: 100;
+        }
+    } */

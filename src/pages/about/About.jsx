@@ -7,7 +7,7 @@ export default function About() {
       <section className="section-tours" id="section-tours">
                 <div id="tours" className="u-center-text u-margin-bottom-big">
                     <h2 className="heading-secondary">
-                        Most popular tours
+                        about Orion Palmer.
                     </h2>
                 </div>
                 <div className="row">
