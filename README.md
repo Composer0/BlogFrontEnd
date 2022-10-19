@@ -28,7 +28,7 @@ Splitting the components is the method I chose for this project. I could use a S
 - Created NavBar variation for user not being logged in.
 - Learned about how Routes replaced switch and in fact makes it easier to write out the route. Used element inside of route to indicate the proper route and thus saving one line of code for each route when implemented.
 
-## Day 7
+## Day 7 & 8
 - Connected Routes for Contact and About Page.
 - Set up email message on Contact page through the use of FormSubmit. It has has a light authentication set up at the moment and only requires a click to verify if the user is a 'robot'.
 - Styled the Contact page.
