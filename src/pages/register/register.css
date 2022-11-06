@@ -5,8 +5,8 @@
     justify-content: center;
     align-items: center;
     background: linear-gradient(
-        rgba(163, 234, 255, 0.5), 
-        rgba(6, 70, 90, 0.5)), 
+        rgba(71, 105, 116, 0.5), 
+        rgba(2, 45, 58, 0.5)), 
         url("https://wallpaper.dog/large/20414995.jpg");
     background-size: cover;
 }
@@ -34,11 +34,17 @@
 .registerButton {
     margin-top: 20px;
     cursor:pointer;
-    background-color: lightcoral;
+    background-color: #93b6b6;
     border: none;
     color: white;
     border-radius: 10px;
     padding: 10px;
+    transition: 0.4s;
+}
+
+.registerButton:hover {
+    background: #b5c99a;
+    box-shadow: rgba(255, 255, 255, 0.5);
 }
 
 .registerLoginButton {
@@ -51,4 +57,15 @@
     padding: 10px;
     color: white;
     border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .registerLoginButton {
+        display: none;
+    }
+    .registerButton {
+        margin-top: 3rem;
+        padding: .8rem 0;
+        font-size: 1.2rem;
+    }
 }

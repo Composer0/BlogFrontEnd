@@ -1,22 +1,52 @@
 import {Link} from "react-router-dom";
 import "./navbar.css"
+import {useContext} from "react";
+import { Context} from "../../context/Context"
+import {FaBars} from "react-icons/fa"
 
-export default function NavBar() {
-    const user = true;
+export default function NavBar({toggle}) {
+    const {user, dispatch} = useContext(Context);
+    const pictureFolder = "http://localhost:4274/images/"
+
+    const handleLogout =() => {
+        dispatch({type: "LOGOUT"})
+    }
+
+
+
   return (
     <div className="nav">
+        {
+                user ? (
+
+                    <Link to="/settings">
+                    <img 
+                        className="navImgMobile" src={pictureFolder+user.profilePicture} alt="profilePicture">
+                    </img>
+                    </Link>
+                ) : (
+                    <ul className="navSigninMobile">
+                        <Link className="navListItemMobile link" to="/login">LOGIN</Link>
+                        <Link className="navListItemMobile link" to="/register">REGISTER</Link>
+                    </ul>
+                )
+
+            }
+            
+           <FaBars className="fabars" onClick={toggle}></FaBars>
+            
         <div className="navLeft">
             <a href="https://www.linkedin.com/in/orion-palmer/" target="_blank" rel="noreferrer">
-                <i className="navIcon fab fa-linkedin"></i>
+                <i className="navIcon navIconMobile fab fa-linkedin"></i>
             </a>
             <a href="https://www.youtube.com/channel/UC1PLqeZnOUcLVteRSYwk1WQ/featured" target="_blank" rel="noreferrer">
-                <i class="navIcon fa-brands fa-youtube"/>
+                <i className="navIcon navIconMobile fa-brands fa-youtube"/>
             </a>
             <a href="https://orionpalmer.hashnode.dev/" target="_blank" rel="noreferrer">
-                <i className="navIcon fa-brands fa-hashnode"/>
+                <i className="navIcon navIconMobile fa-brands fa-hashnode"/>
             </a>
             <a href="https://github.com/Composer0" target="_blank" rel="noreferrer">
-                <i className="navIcon fab fa-github"/>
+                <i className="navIcon navIconMobile fab fa-github"/>
             </a>
         </div>
         <div className="navCenter">
@@ -33,7 +63,7 @@ export default function NavBar() {
                 <li className="navListItem">
                     <Link className="link" to="/write">WRITE</Link>
                 </li>
-                <li className="navListItem">
+                <li className="navListItem" onClick={(handleLogout)}>
                 {user && "LOGOUT"}
                 </li>
             </ul>
@@ -44,7 +74,7 @@ export default function NavBar() {
 
                     <Link to="/settings">
                     <img 
-                        className="navImg" src="https://www.orionpalmer.com/static/media/orionpalmer.ba51d754.webp" alt="user">
+                        className="navImg" src={pictureFolder+user.profilePicture} alt="profilePicture">
                     </img>
                     </Link>
                 ) : (
@@ -57,7 +87,7 @@ export default function NavBar() {
 
             }
 
-            <i className="navSearchIcon fas fa-search"></i>
+            {/* <i className="navSearchIcon fas fa-search"></i> */}
         </div>
     </div>
   )

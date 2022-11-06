@@ -9,7 +9,7 @@
     align-items: center;
     font-family: 'Josefin Sans', sans-serif;
     box-shadow: 0 2px 5px rgb(0, 0, 0, .16);
-    z-index: 1;
+    z-index: 10;
 }
 
 .navLeft, .navRight {
@@ -29,10 +29,11 @@
     color: #444;
     color: #93b6b6;
     cursor: pointer;
+    transition: 0.4s;
 }
 
 .navIcon:hover {
-    color: #afc9c9;
+    color: #b5c99a;
 }
 
 .navImg {
@@ -45,9 +46,11 @@
     border-radius: 50%;
     border-width: 2px;
     cursor: pointer;
+    transition: 0.4s;
 }
+
 .navImg:hover {
-    border-color: #8fdfdf;
+    border-color: #b5c99a;
 }
 
 .navList {
@@ -62,11 +65,12 @@
     margin-right: 20px;
     font-size: 18px;
     font-weight: 300;
-    cursor: pointer
+    cursor: pointer;
+    transition: 0.4s;
 }
 
 .navListItem:hover {
-    color: #8fdfdf; 
+    color: #b5c99a; 
 }
 
 .navSearchIcon {
@@ -75,6 +79,23 @@
     color: #93b6b6;
     cursor: pointer;
     margin-left: 15px;
+    transition: 0.4s;
+}
+
+.navSearchIcon:hover {
+    color: #b5c99a;
+}
+
+.fabars {
+    display: none;
+}
+
+.navImgMobile {
+    display: none;
+}
+
+.navListItemMobile {
+    display:none;
 }
 
 /* custom scrollbar */
@@ -98,4 +119,92 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #807cb5 !important;
     border: 1px solid rgb(30, 9, 148) !important;
+  }
+
+  .slideIconSize {
+    font-size: 2rem;
+    width: 3rem;
+  }
+
+  @media screen and (max-width: 768px){
+    .navListItem, .navRight {
+        display: none;
+    }
+
+    .navLeft {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0;
+        align-items: center;
+    }
+
+    .fabars {
+        display: flex;
+        position: absolute;
+        background-color: transparent;
+        top: 0;
+        right: 0;
+        transform: translate(-70%, 30%);
+        font-size: 2rem;
+        color: #fff;
+        cursor: pointer;
+        margin: 0 auto;
+        z-index: 1;
+
+    }
+
+    .fabars:hover {
+        color: #b5c99a;
+    }
+    .nav {
+            transition: 0.8s all ease;
+    }
+
+    .navImgMobile {
+        display: block;
+        position: absolute;
+        top: 4px;
+        left: 2rem;
+        /* transform: translate(-100%, 40%); */
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        border-style: solid;
+        border-color: #66bfbf;
+        border-radius: 50%;
+        border-width: 2px;
+        cursor: pointer;
+        transition: 0.4s;    
+    }
+    
+    .navImgMobile:hover {
+        border-color: #b5c99a;
+    }
+
+    .navLeftMobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navListItemMobile {
+        display: block;
+        margin-right: 20px;
+        font-size: 18px;
+        font-weight: 300;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    
+    .navListItemMobile:hover {
+        color: #b5c99a; 
+    }
+    
+    .navSigninMobile {
+        display: flex;
+        flex-direction: row;
+    }
+
   }

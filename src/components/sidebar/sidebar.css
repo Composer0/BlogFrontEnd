@@ -10,6 +10,7 @@
     align-items: center;
     color: #66bfbf;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 100%;
 }
 
 .sidebarItem {
@@ -56,9 +57,12 @@
     width: 50%;
     margin-top: 15px;
     cursor: pointer;
+    transition: 0.4s;
+    text-decoration: none;
+    color: #66bfbf;
 }
 .sidebarListItem:hover {
-    color:rgb(144, 218, 218)
+    color:#b5c99a;
 }
 
 .sidebarSocial {
@@ -75,8 +79,15 @@
     cursor: pointer;
     color: #444;
     color: #93b6b6;
+    transition: 0.4s;
 }
 
 .sidebarIcon:hover {
-    color: #afc9c9;
+    color: #b5c99a;
+}
+
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        display: none
+    }
 }

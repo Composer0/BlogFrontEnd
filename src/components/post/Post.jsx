@@ -1,27 +1,46 @@
 import "./post.css"
+import {Link} from "react-router-dom"
 
-export default function Post() {
+export default function Post({post}) {
+  const publicFolder = "http://localhost:4274/images/"
   return (
     <div className="post">
-      <img 
+    <Link className="post" to={`/post/${post._id}`}>
+    {post.photo && <img 
       className="postImg"
-        src="https://wallpaperaccess.com/full/5287561.jpg"
-        alt="post img"
+      // src="https://wallpapercave.com/wp/wp3720374.jpg"
+      src={publicFolder + post.photo}
+      alt="post img"
       />
+    }
+    </Link>
       <div className="postInfo">
-        <div className="postCategories">
-            <span className="postCategory">Music</span>
-            <span className="postCategory">Life</span>
+        <div className="postCategories">{
+
+          post.categories.map((c)=>(
+            <Link className="postCategory" to={`/?categories=${post.categories}`}>
+              <span className="postCategory">{[post.categories]}</span>
+            </Link>
+          ))
+        }
         </div>
-            <span className="postTitle">Break It To Me (Sam de Jong Remix)
+        <Link className="postTitle" to={`/post/${post._id}`}>
+            <span className="postTitle" >{post.title}
             </span>
+        </Link>
             <hr/>
-            <span className="postDate">1 Hour Ago</span>
+            <div className="createdByWhen">
+            <Link className="createdBy" to={`/?username=${post.username}`}>
+              <span>{post.username}</span>
+            </Link>
+              <span className="createdWhen">{new Date(post.createdAt).toDateString()}</span>
+            </div>
       </div>
+      <Link className="postDescription" to={`/post/${post._id}`}>
         <p className="postDescription">
-            Even being a remix, the song is included as an official Muse track, in the Super Deluxe version.
-            The remix is, as opposed to the RnB nature of the original, made as a Trap song and more prominently features strings and the Kitara bass as lead instruments instead of the guitar.
+            {post.description}
         </p>
+      </Link>
     </div>
   )
 }

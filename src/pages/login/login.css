@@ -5,8 +5,8 @@
     justify-content: center;
     align-items: center;
     background: linear-gradient(
-        rgba(163, 234, 255, 0.5), 
-        rgba(6, 70, 90, 0.5)), 
+        rgba(71, 105, 116, 0.5), 
+        rgba(2, 45, 58, 0.5)), 
         url("https://wallpaper.dog/large/20414995.jpg");
     background-size: cover;
 }
@@ -23,6 +23,7 @@
 
 .loginForm>label {
     margin: 10px 0;
+    font-size: 1rem;
 }
 
 .loginInput {
@@ -34,12 +35,24 @@
 .loginButton {
     margin-top: 20px;
     cursor:pointer;
-    background-color: lightcoral;
+    background-color: #93b6b6;
     border: none;
     color: white;
     border-radius: 10px;
     padding: 10px;
+    transition: 0.4s;
 }
+
+.loginButton:disabled{
+    cursor: not-allowed;
+    background-color: rgb(137, 235, 194);
+}
+
+.loginButton:hover {
+    background: #b5c99a;
+    box-shadow: rgba(255, 255, 255, 0.5);
+}
+
 
 .loginRegisterButton {
     position: absolute;
@@ -51,4 +64,27 @@
     padding: 10px;
     color: white;
     border-radius: 10px;
+}
+
+.adminLink {
+    margin-top: 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.adminLink:hover {
+    color:rgb(103, 226, 235);
+}
+
+@media screen and (max-width: 768px) {
+    .loginRegisterButton {
+        display: none;
+    }
+
+    .loginButton {
+        margin-top: 3rem;
+        padding: .8rem 0;
+        font-size: 1.2rem;
+    }
 }
