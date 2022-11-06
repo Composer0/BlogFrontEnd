@@ -41,5 +41,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "blogbackend-production.up.railway.app↗"
+  "proxy": "blogbackend-production.up.railway.app/api"
 }
