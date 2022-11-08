@@ -11,7 +11,7 @@ export default function Settings() {
     const [password, setPassword] = useState("");
     const [success, setSuccess] = useState(false);
     const {user,  dispatch} = useContext(Context);
-    const pictureFile = "http://localhost:4274/images/"
+    const pictureFile = "https://orionblogserver.up.railway.app/images/"
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -64,7 +64,7 @@ export default function Settings() {
       }
 
   return (
-    <div className="settings">
+    <div className="settingsPage">
         <div className='settingswrapper'>
             <div className="settingsTitle">
                 <span className="settingsUpdateTitle">Update Your Account</span>

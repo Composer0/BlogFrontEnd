@@ -9,7 +9,7 @@ export default function SinglePost() {
   const location = useLocation()
   const path = location.pathname.split("/")[2]
   const [post, setPost] = useState({})
-  const publicFolder = "http://localhost:4274/images/"
+  const publicFolder = "https://orionblogserver.up.railway.app/images/"
   const { user } = useContext(Context);
   const [title, setTitle] = useState("")
   const [description, setDescription] = useState("")

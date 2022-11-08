@@ -6,7 +6,7 @@ import {FaBars} from "react-icons/fa"
 
 export default function NavBar({toggle}) {
     const {user, dispatch} = useContext(Context);
-    const pictureFolder = "http://localhost:4274/images/"
+    const pictureFolder = "https://orionblogserver.up.railway.app/images/"
 
     const handleLogout =() => {
         dispatch({type: "LOGOUT"})
