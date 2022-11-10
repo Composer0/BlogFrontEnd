@@ -158,7 +158,8 @@
         color: #b5c99a;
     }
     .nav {
-            transition: 0.8s all ease;
+        width: 100%;
+        transition: 0.8s all ease;
     }
 
     .navImgMobile {
@@ -196,6 +197,7 @@
         font-weight: 300;
         cursor: pointer;
         transition: 0.4s;
+        z-index: 1;
     }
     
     .navListItemMobile:hover {
@@ -207,4 +209,14 @@
         flex-direction: row;
     }
 
+  }
+
+  @media screen and (max-width: 567px) {
+    .navLeft {
+        display: none;
+    }
+
+    .fabars {
+        transform: translate(-70%, 30%);}
+    
   }

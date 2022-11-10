@@ -6,7 +6,7 @@ import axios from "axios"
 
 export default function Settings() {
     const [file, setFile] = useState(null);
-    const [username, setUsername] = useState("");
+    // const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [success, setSuccess] = useState(false);
@@ -18,7 +18,7 @@ export default function Settings() {
         dispatch({ type: "UPDATE_START"}); //This was needed in order to stop the crashing from occuring...
         const updatedUser = {
           userId: user._id,
-          username,
+          // username,
           email,
           password
         };
@@ -35,12 +35,12 @@ export default function Settings() {
           data.append("file", file);
           updatedUser.profilePicture = filename;
           try{
-              await axios.post("/upload", data);
+              await axios.post("https://orionblogserver.up.railway.app/api/upload", data);
           }catch(err){
         }
         }
         try {
-          let res = await axios.put("/users/" +  user._id, updatedUser)
+          let res = await axios.put("https://orionblogserver.up.railway.app/api/users/" +  user._id, updatedUser)
           setSuccess(true)
             dispatch({ type: "UPDATE_SUCCESS", payload: res.data})
         } catch (err) {
@@ -55,13 +55,15 @@ export default function Settings() {
 
       const handleDelete = async() => {
         try {
-          await axios.delete(`/users/${user._id}`, {data: {userId:user._id}})
+          await axios.delete(`https://orionblogserver.up.railway.app/api/users/${user._id}`, {data: {userId:user._id}})
           dispatch({type: "LOGOUT"})
           window.location.replace("/")
         } catch(err) {
     
         }
       }
+
+      console.log(user)
 
   return (
     <div className="settingsPage">
@@ -87,11 +89,7 @@ export default function Settings() {
                       onChange={(e) => setFile(e.target.files[0])}/>
                 </div>
                 <label>Username</label>
-                <input 
-                  type="text" 
-                  autoComplete="on"
-                  placeholder={user.username} 
-                  onChange={(e) => setUsername(e.target.value)} />
+                <label className="settingsUsername">{user.username}</label>
                 <label>Email</label>
                 <input 
                   type="email" 

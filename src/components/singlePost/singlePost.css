@@ -116,15 +116,23 @@
     background-color: rgb(136, 255, 132);
 }
 
+.singlePostEditMobile {
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
     .singlePostTitle {
         font-size: 3rem;
+        text-align: left;
+        margin: 1rem;
     }
     .singlePostDescription {
         font-size: 24px;
     }
     .singlePostInfo {
+        flex-direction: column;
         font-size: 24px;
+        text-align: left;
     }
     .singlePostInfo, .singlePostDescription {
         margin: 2rem;
@@ -137,5 +145,27 @@
     }
     .singleUpdateButton {
         margin-right: 2rem;
+    }
+    .singlePost {
+        width: 100%;
+        margin: 1rem auto;
+    }
+    .singlePostDate {
+        margin-top: 1rem;
+    }
+    .singlePostEditMobile {
+        display: block;
+        text-align: center;
+        font-size: 3rem;
+        justify-content: space-between;   
+    }
+
+    .singlePostEdit {
+        display: none;
+    }
+
+    .fa-trash {
+        margin-left: 6rem;
+        padding-bottom: 2rem;
     }
 }

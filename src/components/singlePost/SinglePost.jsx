@@ -18,7 +18,7 @@ export default function SinglePost() {
   
   useEffect(()=>{
     const getPost = async () => {
-      const res = await axios.get("/posts/" + path);
+      const res = await axios.get("https://orionblogserver.up.railway.app/api/posts/" + path);
       setPost(res.data)
       setTitle(res.data.title)
       setDescription(res.data.description)
@@ -31,7 +31,7 @@ export default function SinglePost() {
   const handleDelete = async() => {
     try {
 
-      await axios.delete(`/posts/${post._id}`, {data: {username:user.username}})
+      await axios.delete(`https://orionblogserver.up.railway.app/api/posts/${post._id}`, {data: {username:user.username}})
       window.location.replace("/")
     } catch(err) {
 
@@ -40,7 +40,7 @@ export default function SinglePost() {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`/posts/${post._id}`, {
+      await axios.put(`https://orionblogserver.up.railway.app/api/posts/${post._id}`, {
         username:user.username,
         title,
         description
@@ -108,7 +108,16 @@ export default function SinglePost() {
         {updateMode && (
         <button className="singleUpdateButton" onClick={handleUpdate}>Update</button>
         )}
+        <div className="singlePostEditMobile">
+              <i className="singlePostIcon fa-regular fa-pen-to-square" onClick = {() => setUpdateMode(true)}></i>
+              <i className="singlePostIcon fa-solid fa-trash" onClick={handleDelete}></i>
+              </div>
       </div>
     </div>
   )
 }
+
+
+// http://orionblogserver.up.railway.app/api/post/63618c0a63706917bd842c58
+
+// https://orionblogserver.up.railway.app/api/posts/63618c0a63706917bd842c58
