@@ -119,8 +119,16 @@ hr {
     .createdBy, .createdWhen {
         padding: 1rem 0;
     }
+    .createdBy {
+        right: 4rem;
+    }
+    .createdWhen {
+        left: 4rem;
+    }
     .postDescription {
         font-size: 18px;
+        width: 95%;
+        text-align: center;
     }
     .postTitle {
         font-size: 30px;

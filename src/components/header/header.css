@@ -78,6 +78,9 @@
     .headerTitleSmDeveloped {
         top: 45%;
     }
+    .headerTitleLg {
+        top: 12%; 
+    }
 }
 
 @media screen and (max-height: 720px) {

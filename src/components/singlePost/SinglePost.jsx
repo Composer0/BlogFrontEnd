@@ -116,8 +116,3 @@ export default function SinglePost() {
     </div>
   )
 }
-
-
-// http://orionblogserver.up.railway.app/api/post/63618c0a63706917bd842c58
-
-// https://orionblogserver.up.railway.app/api/posts/63618c0a63706917bd842c58
